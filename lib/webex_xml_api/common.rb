@@ -8,7 +8,7 @@ module WebexXmlApi
     # The +post_webex_request+ method sends the request to WebEx XML Service.
     #
     def post_webex_request(site_name, request)
-      endpoint = "https://#{site_name}.webex.com/WBXService/XMLService".freeze
+      endpoint = "https://#{site_name}.webex.com.cn/WBXService/XMLService".freeze
       HTTParty.post(endpoint, body: request,
                               headers: { 'Content-Type' => 'application/xml' })
     end
